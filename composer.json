@@ -7,8 +7,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"twitter/bootstrap": "3.3.0",
-		"pingpong/twitter": "1.0.3"
-	},
+		"j7mbo/twitter-api-php": "dev-master"
+			},
 	"autoload": {
 		"classmap": [
 			"app/commands",

@@ -1,0 +1,9 @@
+URLS to take note of:
+
+https://twitter.com/search?f=realtime&q=shit%20from%3ACelinetheFeline&src=typd
+
+https://dev.twitter.com/rest/tools/console
+
+https://github.com/J7mbo/twitter-api-php
+
+https://apps.twitter.com/app/7241770/keys

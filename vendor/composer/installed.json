@@ -1739,117 +1739,43 @@
         ]
     },
     {
-        "name": "jublonet/codebird-php",
-        "version": "2.5.0",
-        "version_normalized": "2.5.0.0",
+        "name": "j7mbo/twitter-api-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
-            "url": "https://github.com/jublonet/codebird-php.git",
-            "reference": "38b88fec80be0f3e5b93e07e6804a411595dd379"
+            "url": "https://github.com/J7mbo/twitter-api-php.git",
+            "reference": "ab76f1c1e6bf83f0a257216cbaf9932b7cc19a3f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/jublonet/codebird-php/zipball/38b88fec80be0f3e5b93e07e6804a411595dd379",
-            "reference": "38b88fec80be0f3e5b93e07e6804a411595dd379",
+            "url": "https://api.github.com/repos/J7mbo/twitter-api-php/zipball/ab76f1c1e6bf83f0a257216cbaf9932b7cc19a3f",
+            "reference": "ab76f1c1e6bf83f0a257216cbaf9932b7cc19a3f",
             "shasum": ""
         },
-        "require": {
-            "ext-curl": "*",
-            "ext-hash": "*",
-            "ext-json": "*",
-            "lib-curl": "*",
-            "lib-openssl": "*"
-        },
-        "time": "2014-06-20 16:42:05",
+        "time": "2013-10-03 10:04:59",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
-            "classmap": [
-                "src/"
+            "files": [
+                "TwitterAPIExchange.php"
             ]
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-3.0"
+            "GNU Public License"
         ],
         "authors": [
             {
-                "name": "Joshua Atkins",
-                "email": "joshua.atkins@jublo.net",
-                "homepage": "http://atkins.im/",
-                "role": "Developer"
-            },
-            {
-                "name": "J.M.",
-                "email": "jm@jublo.net",
-                "homepage": "http://mynetx.net/",
-                "role": "Developer"
+                "name": "James Mallison",
+                "homepage": "https://github.com/j7mbo/twitter-api-php"
             }
         ],
-        "description": "A Twitter library in PHP.",
-        "homepage": "http://www.jublo.net/projects/codebird/php",
+        "description": "Simple PHP Wrapper for Twitter API v1.1 calls",
+        "homepage": "https://github.com/j7mbo/twitter-api-php",
         "keywords": [
             "api",
-            "networking",
-            "twitter"
-        ]
-    },
-    {
-        "name": "pingpong/twitter",
-        "version": "1.0.3",
-        "version_normalized": "1.0.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/pingpong-labs/twitter.git",
-            "reference": "b449125e91ce95ed2a244d97e63d9aa3a3a3f059"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/pingpong-labs/twitter/zipball/b449125e91ce95ed2a244d97e63d9aa3a3a3f059",
-            "reference": "b449125e91ce95ed2a244d97e63d9aa3a3a3f059",
-            "shasum": ""
-        },
-        "require": {
-            "illuminate/config": "4.*",
-            "illuminate/http": "4.*",
-            "illuminate/routing": "4.*",
-            "illuminate/session": "4.*",
-            "illuminate/support": "4.*",
-            "jublonet/codebird-php": "2.5.*",
-            "php": ">=5.4.0"
-        },
-        "require-dev": {
-            "mockery/mockery": "0.9.*",
-            "phpunit/phpunit": "4.1.*"
-        },
-        "time": "2014-09-05 10:36:28",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.3-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Pingpong\\Twitter": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Pingpong Labs",
-                "email": "gue.warsono@gmail.com"
-            }
-        ],
-        "description": "Simple Twitter API for Laravel 4",
-        "keywords": [
-            "laravel",
-            "oauth",
-            "pingpong",
+            "php",
             "twitter"
         ]
     }
