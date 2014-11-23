@@ -6,11 +6,16 @@
 <br>
 <br><br><br><br><br><br>
 <p>Search for your tweets here.</p>
-<p>First login here:
-	<a href= "#">
+<p> {{Form::open(array('url' => '')) }}
+	<p>{{ Form::label('search', 'Keywords (one per search)') }}
+	{{ Form::text('keyword', null, array('tweet'=>'value')) }}
+	{{ Form::submit('Sweep!') }} {{ Form::close() }}</p>
+</p>
+<!--<form action="$_SERVER['PHP_SELF']" method="POST">
+<input type="text" value="search" name="search" class="col-md-1">
 
+<input type="submit" class="primary" value="search" name="search"></a></p>-->
 
-<input type="button" class="primary" value="login"></a></p>
 <?php 
 
 
@@ -24,18 +29,24 @@ $settings = array(
 
 $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 $getfield = '?screen_name=CelinetheFeline';
-$maxid = '?max_id=494227918726254592';
 $requestMethod = 'GET';
 
 $twitter = new TwitterAPIExchange($settings);
 $response = $twitter->setGetfield($getfield)
-	->setMaxid($maxid)
+
     ->buildOauth($url, $requestMethod)
     ->performRequest();
 
-var_dump(json_decode($response));
+//var_dump$_POST["search"];
 
-
+/*if (!empty($searchinput)) {
+	var_dump($searchinput);
+} else {
+	echo "there's nothing here";
+	}*/
 
 ?>
+
+</form>
+
 

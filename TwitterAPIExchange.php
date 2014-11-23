@@ -21,6 +21,7 @@ class TwitterAPIExchange
     private $getfield;
     protected $oauth;
     public $url;
+    //public $twitkeyword
 
     /**
      * Create the API access object. Requires an array of settings::
@@ -118,6 +119,10 @@ class TwitterAPIExchange
         return $this->postfields;
     }
     
+   // public function getSearchresults()
+    //{
+
+    //}
     /**
      * Build the Oauth object using params set in construct and additionals
      * passed to this method. For v1.1, see: https://dev.twitter.com/docs/api/1.1

@@ -25,3 +25,9 @@ Route::get('start', function()
 {
 	return View::make('pages.start');
 });
+
+Route::post('/', function()
+{
+	$keyword = Input::get('keyword');
+	return View::make('pages.searchresults');
+});
