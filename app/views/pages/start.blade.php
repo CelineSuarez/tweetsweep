@@ -32,10 +32,22 @@ $getfield = '?screen_name=CelinetheFeline';
 $requestMethod = 'GET';
 
 $twitter = new TwitterAPIExchange($settings);
-$response = $twitter->setGetfield($getfield)
 
+
+
+$responses = $twitter->setGetfield($getfield)
     ->buildOauth($url, $requestMethod)
     ->performRequest();
+
+$responses = (json_decode($responses));
+foreach($responses as $response){
+	$text = $response->text;
+	echo "<div class='container'><h4 class='text-primary bg-info'>" .  $text .  "</h3></div>";
+	if (strpos($text,'Wow') !== false) {
+    echo 'HERPDERP';
+	}
+}
+
 
 //var_dump$_POST["search"];
 

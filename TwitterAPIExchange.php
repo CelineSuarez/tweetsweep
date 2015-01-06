@@ -22,7 +22,6 @@ class TwitterAPIExchange
     protected $oauth;
     public $url;
     //public $twitkeyword
-
     /**
      * Create the API access object. Requires an array of settings::
      * oauth access token, oauth access token secret, consumer key, consumer secret
