@@ -4,6 +4,9 @@
 
 <div class="container-fluid">
 	<p class="homeexample">Make your tweets inspirational quotes.</p>
+	<a href="#about" class="btn btn-circle page-scroll">
+		<i class="fa fa-angle-double-down animated"></i>
+	</a>
 </div>
 
 <div class="container">	
