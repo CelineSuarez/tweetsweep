@@ -1,0 +1,29 @@
+body {
+	background-color: #6C2D58;
+	font-family: 'Flamenco', cursive;
+	font-size: 20px;
+	color: #fff;
+}
+
+a{
+	color:#fff;
+	font-family: 'Flamenco', cursive;
+	text-shadow: 3px 3px 7px #000;
+}
+
+.tweets{
+	text-align: center;
+	font-size: 40px;
+	margin-top:100px;
+	margin-bottom:100px;
+}
+
+.homeexample{
+	text-align:center;
+	font-size: 80px;
+	margin-bottom:200px;
+	background: url("images/sunset3.jpg") no-repeat center center scroll;
+	padding: 291px 50px 560px 50px;
+	text-shadow: 3px 3px 7px #000;
+	font-family: 'Give You Glory', cursive;
+}

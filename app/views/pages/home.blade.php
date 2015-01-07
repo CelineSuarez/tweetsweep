@@ -1,57 +1,67 @@
 @extends('layouts.default')
 @section('content')
-	
 @stop
-<br><br><br><br>
- <div class="container">
 
-        <!-- Heading Row -->
-        <div class="row">
-            <div class="col-md-8">
-                <img class="img-responsive img-rounded" src="http://placehold.it/900x350" alt="">
-            </div>
-            <!-- /.col-md-8 -->
-            <div class="col-md-4">
-                <h1>Business Name or Tagline</h1>
-                <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
-                <a class="btn btn-primary btn-lg" href="#">Call to Action!</a>
-            </div>
-            <!-- /.col-md-4 -->
-        </div>
-        <!-- /.row -->
+<div class="container-fluid">
+	<p class="homeexample">Make your tweets inspirational quotes.</p>
+</div>
 
-        <hr>
+<div class="container">	
+	<p>Search for your tweets here.</p>
+	<p> {{Form::open(array('url' => '')) }}
+		<p>{{ Form::label('search', 'Keywords (one per search)') }}
+		{{ Form::text('keyword', null, array('tweet'=>'value')) }}
+		{{ Form::submit('Sweep!') }} {{ Form::close() }}</p>
+	</p>
+</div>
+<!--<form action="$_SERVER['PHP_SELF']" method="POST">
+<input type="text" value="search" name="search" class="col-md-1">
 
-        <!-- Call to Action Well -->
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="well text-center">
-                    This is a well that is a great spot for a business tagline or phone number for easy access!
-                </div>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
+<input type="submit" class="primary" value="search" name="search"></a></p>-->
 
-        <!-- Content Row -->
-        <div class="row">
-            <div class="col-md-4">
-                <h2>Heading 1</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-                <a class="btn btn-default" href="#">More Info</a>
-            </div>
-            <!-- /.col-md-4 -->
-            <div class="col-md-4">
-                <h2>Heading 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-                <a class="btn btn-default" href="#">More Info</a>
-            </div>
-            <!-- /.col-md-4 -->
-            <div class="col-md-4">
-                <h2>Heading 3</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe rem nisi accusamus error velit animi non ipsa placeat. Recusandae, suscipit, soluta quibusdam accusamus a veniam quaerat eveniet eligendi dolor consectetur.</p>
-                <a class="btn btn-default" href="#">More Info</a>
-            </div>
-            <!-- /.col-md-4 -->
-        </div>
-        <!-- /.row -->
+<?php 
+
+
+/** Set access tokens here - see: https://dev.twitter.com/apps/ **/
+$settings = array(
+    'oauth_access_token' => "32661138-nFEcD5qcsse7wCW8RskmH1XiM4kkv04yNfViVCBqQ",
+    'oauth_access_token_secret' => "SJCQTzg9637hamVqCVoFw0gOVx0oBULCq4OPf5qhnoOMW",
+    'consumer_key' => "mbhxCseUprBbO49TZ5Ee3XJIM",
+    'consumer_secret' => "w57Vz4a5HJv5W5Tqe54BgBgiCOUnwQS2pasb8JdFeOe0ptGT6I"
+);
+
+$url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
+$getfield = '?screen_name=CelinetheFeline';
+$requestMethod = 'GET';
+
+$twitter = new TwitterAPIExchange($settings);
+
+
+
+$responses = $twitter->setGetfield($getfield)
+    ->buildOauth($url, $requestMethod)
+    ->performRequest();
+
+$responses = (json_decode($responses));
+foreach($responses as $response){
+	$text = $response->text;
+	echo "<div class='container tweets'>" .  $text .  "</div>";
+	if (strpos($text,'Wow') !== false) {
+    echo 'HERPDERP';
+	}
+}
+
+
+//var_dump$_POST["search"];
+
+/*if (!empty($searchinput)) {
+	var_dump($searchinput);
+} else {
+	echo "there's nothing here";
+	}*/
+
+?>
+
+</form>
+
+

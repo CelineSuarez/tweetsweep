@@ -1,1 +1,1 @@
-<p> This is my footer </p>
+<p> Copyright 2015 TweetSweep </p>

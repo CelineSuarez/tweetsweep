@@ -15,4 +15,9 @@
 
     <!-- Custom CSS -->
     <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ URL::asset('css/custom.css') }}" rel="stylesheet">
+
+    <!--Custom fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Flamenco:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Give+You+Glory' rel='stylesheet' type='text/css'>
 </head> 
